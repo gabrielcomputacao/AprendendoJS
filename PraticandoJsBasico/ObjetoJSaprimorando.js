@@ -164,4 +164,108 @@ console.log(aviaozinho.roda)
 console.log(aviaozinho.status())
 
 
+//quando se usa o create ele já coloca o prototipo escolhido como pai
+const aviazao = Object.create(aviao)
+console.log(aviazao.roda)
+
+//quando voce cria um objeto por uma funcao cosntrutora, esse objeto aponta para o prototipo da funcao 
+//construtora, diferente de se criar um new Object que aponto para o object.prototype
+
+
+
+//----------
+// evitando modificações nos objeto
+
+
+let passarinho= Object.preventExtensions({
+    asinha:2,
+    nome:'piu'
+})//nao consegue adicionar mais nenhum atributo
+
+passarinho.cantado = "voz fina"
+console.log(passarinho)
+
+
+//seal(selar) - nao consegue deletar nem acrescentar
+const maria = {cidade:'nazare',rua:'casa'}
+Object.seal(maria)
+
+delete maria.cidade//nao deleta  por causa do seal
+console.log(maria)
+
+
+//o freeze faz o selado + todos os atributos nao podem ser modificados
+
+
+// JSON VS OBJECT
+
+/*Json é um formato de dados, mais utilizado na web,generico, nao carrega
+nada de especifico de nenhuma linguagem
+*/
+
+const obj555 = {
+    a:1,
+    b:2,
+    c:3,
+    soma(){
+        return a + b + c
+    }
+}
+
+console.log(JSON.stringify(obj555))
+
+console.log(JSON.parse('{"a":1,"b":2,"c":78}'))
+
+console.log(JSON.parse('{"a":1,"b":"string","c":[1,2,3,4,5],"d":{}}'))
+
+
+class Lancamento{
+    constructor(nome='aleatorio',valor=0){
+        this.nome=nome
+        this.valor=valor
+    }
+}
+
+class CicloFinanceiro{
+    constructor(mes,ano){
+        this.mes=mes
+        this.ano=ano
+        this.lancamentos=[]
+    }
+    addLancamentos(...lanc){
+        lanc.forEach(l => this.lancamentos.push(l))
+    }
+
+    sumario(){
+        let valorCOnsolidado=0
+        this.lancamentos.forEach(l=>{
+            valorCOnsolidado += l.valor
+        })
+        return valorCOnsolidado 
+    }
+}
+    const salarinho = new Lancamento('salario',45000)
+    const contaLuz = new Lancamento('luz',-1000)
+
+    const contas = new CicloFinanceiro(8,2018)
+    contas.addLancamentos(salarinho,contaLuz)
+
+    console.log(contas.sumario())
+
+class Menino{
+    constructor(nome='jonson'){
+        this.nome=nome
+    }
+}
+
+
+class garoto extends Menino{
+    constructor(nome,idade=90){
+        super(nome)
+        this.idade=idade
+    }
+}
+
+const gabi = new garoto
+console.log(gabi.nome,gabi.idade)
 
