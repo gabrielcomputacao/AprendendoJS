@@ -295,3 +295,4 @@ const carro1 = { preco:30000 , desc:0.2}
 console.log(getPreco.call(carro1))
 console.log(getPreco.apply(carro1))
 
+module.exports=conta
