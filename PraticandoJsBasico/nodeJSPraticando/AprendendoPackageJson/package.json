@@ -1,0 +1,14 @@
+{
+  "name": "aprendendopackagejson",
+  "version": "1.0.0",
+  "description": "testando criacao de package json",
+  "main": "AprendedoPackageJson.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gabriel henrique",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}

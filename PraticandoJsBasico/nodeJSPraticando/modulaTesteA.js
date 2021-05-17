@@ -11,5 +11,15 @@ console.log(a.random(1,300)) //funcao random vem do modulo requirido lodash(funÃ
 //setInterval(()=>console.log(a.random(10,29),),2000)
 
 const importacaoConta = require('../FuncoesJS')
-console.log(importacaoConta.nome)
+let teste = importacaoConta.nome
+console.log(teste)
 
+//testando require de modulos proprios do node
+
+/*
+const http = require('http')
+http.createServer((req,res) =>{
+    res.write('fala jonson')
+    res.end()
+}).listen(8080)
+*/
