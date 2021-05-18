@@ -1,0 +1,13 @@
+Quando se cria um novo script com um nome que voce queira escolher
+usa-se o npm run nomeDoScript
+
+Quando se usa um script já do node,exemplo:start,teste,stop,restart
+usa-se npm start   , pois já é um comando que o node identifica
+
+No caso os dois funcionam com o npm run nomeDoScript
+
+
+Para recriar a pasta node modules , pasta voce ter a pasta packagejson e escreve no terminal do projeto
+npm install
+Por isso nao precisa passar essa pasta para repositorios pois ela e facilmente recriada
+
