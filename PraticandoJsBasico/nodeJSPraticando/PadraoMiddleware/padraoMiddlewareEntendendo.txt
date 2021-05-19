@@ -1,0 +1,11 @@
+Padrao chain of responsability(Padrao Middleware)
+
+O padrao tem a ideia de seprar um processo em pequenos passos, mas nao tem uma amarração fixa nos processos
+O passo é independente, Passa como parametro uma função next() passando para o proximo passo
+
+Cadeia de responsabilidades
+Cada passo tem uma responsabilidade, sequencia de passos , voce passa uma funcao e quando essa funcao é chamada
+voce dispara a função next, mas se nao quiser disparar a funçao next o processo para.
+
+A função next conhece quem é o proximo processo a ser chamado
+

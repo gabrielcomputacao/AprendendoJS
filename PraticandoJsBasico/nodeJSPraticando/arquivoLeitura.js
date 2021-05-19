@@ -4,7 +4,8 @@ const fs = require('fs')
 
 const caminho = __dirname + '/arquivo.json'
 
-//__dirname é uma cosntante que está presente em todos os 
+//__dirname é uma cosntante que está presente em todos os diretorios de documentos do javascript,mostrando
+//o caminho, a localidade, O CAMINHO DO DIRETORIO
 
 //sincrono..(vai ficar parado esperando ler o arquivo, se for algo grande demora muito pode gerar problemas)
 const conteudo = fs.readFileSync(caminho,'utf-8')
@@ -22,3 +23,4 @@ fs.readFile(caminho,'utf-8',(err,conteudoNovo)=>{
 
 const configuracao = require('./arquivo.json')
 console.log(configuracao.db)
+console.log(configuracao.db.port)
