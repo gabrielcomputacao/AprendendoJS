@@ -20,6 +20,9 @@ function falarDepoisDe(segundos,frases){
 */
 
 //acessar o reusltado de uma promessa atendida com sucesso usar o then
-falarDepoisDe(3,'top').then(frases => frases.concat('??!'))                                                     
+falarDepoisDe(3,'top').then(frase => console.log(frase.concat('??!')))                                                     
 
+//Promessa só aceita um parametro!!!
 
+//. catch trata os erros que possam acontecer
+//pode chamar o then varias vezes para encadear os resultados, o resultado de um passa para o proximo then
