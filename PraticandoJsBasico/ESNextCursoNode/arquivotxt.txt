@@ -1,0 +1,6 @@
+{
+    "nome":"gabriel",
+    "idade": 21,
+    "peso":76,
+    "namora":"sim"
+}
