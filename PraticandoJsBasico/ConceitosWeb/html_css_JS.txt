@@ -1,0 +1,12 @@
+html parte visual da pagina - estrutural
+
+Css - define estilos para sua aplicação - design
+
+Js - Comportamento da aplicação
+
+Usando essas tres aplicacoes se faz uma aplicaçao front end
+
+html faz referencia css e ao js
+No framework react o java script e html estao bem ligados(nao divide tanto um do outro)
+
+

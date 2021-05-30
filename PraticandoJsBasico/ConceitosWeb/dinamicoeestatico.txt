@@ -1,0 +1,11 @@
+CONTEUDO DINAMICO VS ESTATICO
+
+conteudo é estatico quando o servidor leu os arquivos e passa isso para o cliente
+
+conteudo dinamico é gerado a partir de um condigo,Exemplo informações trazidas do banco de dados, informacoes
+como hora no momento, arquivos que são mudados dependendo do que o codigo foi feito para fazer.
+Exemplo: gerar a lista dos clientes.(Codigo no back end que faz essa busca), isso se torna um conteudo dinamico
+
+Os recursos do servidor para gerar um conteudo estatico é bem menor
+
+

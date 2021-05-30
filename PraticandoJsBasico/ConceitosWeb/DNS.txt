@@ -1,0 +1,28 @@
+Servidor DNS - traduzir os nomes de dominio em endereço IP
+www.cod3r.com.br -> 54.69.61.89
+www é um subdominio
+Compra um dominio com registro br, tem como configurar o seu dominio
+Servidor de registro br nao suporta caracter curinga *
+
+DNS funciona sobre o protocolo UDP na porta 53
+Mais rapido mais leve que e TCP/IP
+
+1 - usuario informa o endereço
+2 - computador envia uma consulta DNS para servidor local
+3 - repsonde com o endereço IP
+4 -COmputador acessa o servidot a partir do IP obtido
+
+Muitos servidores fazem cache do DNS, eles precisam replicar para os outros servidores de DNS
+
+DNS records(registros)
+A - IPv4
+AAA - IPv6
+MX - servidor de email
+NS - servidor DNS
+Cname - canonical name(apelido)
+
+
+
+
+
+

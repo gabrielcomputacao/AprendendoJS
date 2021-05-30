@@ -1,0 +1,13 @@
+Antes de chegar no servidor web server que está armazenando seu site a requisicao
+passa antes no DNS server , que voce tem o domínio quando voce digitar o dominio ele vai redirecionar
+para seu servidor web que assim mostra sua pagina.
+
+Virtual Hosting - Na mesma maquina que guarda um web server, armazena varios sites ao mesmo tempo, quando é 
+de porte pequeno uma mesma maquina pode ser o web server de varios sites
+
+Estrutura de pastas - separar bem as pastas para serem guardadas, seprarar cada pasta que armazena cada coisa
+imagens,css,html,javascript
+
+web stack - linguagem,web server,banco de dados, linux(pacotes com esses conceitos essenciais)
+
+Precisa te rum registro DNS para ser visto na internet(seu dominio do seu site para ser acessado)

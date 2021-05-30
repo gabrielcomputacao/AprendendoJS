@@ -1,0 +1,19 @@
+Aplicacao web - server-side
+Uma aplicacao que toda a logica, e renderização são feitas no lado do servidor.
+Exemplo: Java - o servidor centraliza as atividades
+
+
+Aplicacao - front-end + service (cliente side)
+Com o JavaScript ele traz as funcoes para a parte do front end
+
+Aplicacao server side
+COnteudo html é gerado do lado do servidor e manda essa informacao para ser renderizada
+
+cliente side -
+spa - single page aplication
+APlicacao que tem apenas uma pagina, e a partir dai toda a parte visual é gerada no lado do cliente
+Uma vez que carrega os dados visuais, voce vai consumir os dado do servidor , nao mais vai necessitar a criacao
+dos dados visuais, so vai consumir o serviço json
+
+
+

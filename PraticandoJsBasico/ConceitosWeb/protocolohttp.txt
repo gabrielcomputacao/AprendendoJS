@@ -3,7 +3,7 @@ PROTOCOLO HTTP
 hyper text tranfer protocol - significado das siglas
 A maior parte do trafego da internet roda em cima do HTTP
 
-
+Curiosidade
 HTML - hiper text marcated lenguage
 
 Caracteristicas
