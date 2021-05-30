@@ -1,0 +1,39 @@
+PROTOCOLO HTTP
+
+hyper text tranfer protocol - significado das siglas
+A maior parte do trafego da internet roda em cima do HTTP
+
+
+HTML - hiper text marcated lenguage
+
+Caracteristicas
+Está dentro da camada de aplicação da pilha do TCP/IP
+Stateless - quando uma maquina manda uma requisicao para um servidor é como se fosse a primeira vez que 
+essas maquinas estao se comunicando
+Cliente - Servidor (requisicao-resposta)
+
+Opera dentro da pilha de TCP/IP
+Retorna referencias para montar paginas na web html,css,JS,midias e cada referencia ele faz uma requisicao e
+faz uma resposta para ir montado a pagina na web
+
+Quando se escreve no google e da Enter manda uma requisicao por meio de get no protocolo HTTP para
+o host: www.google.com.br o servidor gera a resposta passando o numero 200 que remete a requisicao feita com
+sucessao, pega o contexto e passa como resposta a pagina que foi solicitada.
+
+Metodo de requisicao do HTTP
+Get,post,put,delete,trace,options,connect,head
+
+É necessario diminuir a carga de Request para o site carregar mais rapido
+Exemplo: varios arquivos de javascript,juntas tudo e uma requisicao só
+o arquivo nao pode ser muito grande pois fica inviavel
+, redes de auto desempenho
+
+Grupos de Status HTTP
+
+ - 100 - Informacao
+ - 200 - sucessao
+ - 300 - redirecionamento
+ - 400 - Erro no Cliente
+ - 500 - Erro no servidor(banco,servidor,etc)
+
+

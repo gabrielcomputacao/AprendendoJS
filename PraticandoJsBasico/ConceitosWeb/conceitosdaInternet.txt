@@ -1,0 +1,43 @@
+TCP/IP
+Orientado a conexao e confiavel
+
+IP - separado em camadas , com cada camada tendo sua responsabilidade
+Aplicacao , transporte , internet , RedeFisica -> a camada de cima usa  a camada debaixo começando
+da camada de Aplicacao
+
+ -- Parte fisica - wifi, hardwares,Ethernet,Mac addres(endereçamento)
+ -- internet - IP - internet protocol, conexao entre redes, transferencia de pacotes
+ -- transporte - TCP(transport control protocol),comunicacao maquina com maquina
+
+ Anatomia do Ipv4(aula de redes)
+
+ classe Aplicacao
+ Classe A
+ 192.168.100.230  - parte desse ip identifica a rede em que ele está e outra parte identificar o computador 
+ 1º parte é a rede
+ 3 ultimas parte definir a maquina(host)
+ Tem poucas redes e tem muitas maquina, nao é disponivel  tao facil assim
+
+Classe B
+Nas primeiras duas partes os bits estao mapeados com 1 sginifica que as duas primeiras partes do ip são 
+destinadas a rede e as duas ultimas destinadas para o host
+
+
+Classe C
+Os trem primeiros bits estao mapeados com 1, destinados a rede, o ultimo é destinado ao host
+a mascara de rede fica 255.255.255.0 isso significa que é uma classe C com 3 partes destindas a rede e
+somente a ultima é destinada ao host(ip da maquina)
+
+
+Conceito de porta:
+Alem do ip que queira comunicar precisa saber a porta que é o processo
+A porta mapeia processos na web, por isso tem que saber a porta para ter a comunicação entre processos
+Ambiente de desenvolvimento usar outras portas pois serao feitos varios processos
+
+
+
+
+
+
+
+
