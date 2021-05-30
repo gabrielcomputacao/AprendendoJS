@@ -1,0 +1,48 @@
+servico web - tem um serviço sua aplicacao prove 
+Exemplo: lista de servidores 
+
+web service
+Um serviço que roda em cima de tecnologias da web e que normalmente os dados sao trafegados de forma textual
+Dados trafegados de forma textual, fazer um parse e interpreta-los
+
+web service - duas grandes alternativas para trabalahr com web service
+
+SOAP - simple object accesa protocol
+Uma versao antiga, mais burocratico
+Conceito wsdl - web service description language(linguagem descriçao de web service) - descreve as funcionalidades
+que um servico disponibiliza, mostra os atributos, descreve o servico, burocratico de usar;
+RPC - remote procidore call - a partir de um cliente consegue invocar um procedimento remoto
+
+
+
+Rest - Representational state transfer(REST)
+Mais leve e mais simples
+Usa Json, HTTP, voce faz uma requisicao para um end point (um ponto que voce quer pegar algum servico)
+e usa os metodos do http , no meio existe algumas arquiteturas para organizar esse processo
+
+
+COnvencoes RESTfull
+
+URL         | metodo  | descricao
+/clientes       post    novo cliente
+
+conversoes restfull gira muito aos metodos do GRUD
+
+Escolhas Arquiteturais
+SOA
+Antiga
+Mais dificil conseguir escalar de forma independente
+
+Micro serviço
+Pega um aplicacao maior e quebrar ela em micro serviços
+Dividi algo grande em micros partes
+
+
+Mercado
+Tecnologias trabalham com SOAP recebem o Xhtml,burocratico
+
+Rest trabalha com json,muito mais simples, convencao a ser seguida para aderir ao restfull
+
+
+
+
