@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Exercicios Html</h1></header>
+    <nav>
+        <a href="exercicios/testes.html"> Primeiro teste</a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer>Treinando html</footer>
+
+    <script>
+        document.querySelectorAll('a').forEach((link)=>{
+            const conteudo = document.getElementById('conteudo')
+            link.onclick = function(e){
+                //preveni que o comportamento padrao nao ocorra(navegacao no caso da tag A)
+                e.preventDefault()
+                
+                
+                fetch(link.href)//chamada ajax
+                .then(resposta => resposta.text())//chama outra funcao que retorna uma promisse tambem
+                .then(html => conteudo.innerHTML=html)
+                //fetch - chamada ajax , retorna uma promisse
+                // chamando o ajax e retornando o .text que tambem é uma promisse, serve para pegar
+                //o conteudo html da pagina que foi feito a requisicao
+                //só depois de fazer mais um then voce tem acesso ao html que foi retornado pelo
+                //text
+                console.log('cliquei!!')
+            }
+        })
+    </script>
+</body>
+</html>
