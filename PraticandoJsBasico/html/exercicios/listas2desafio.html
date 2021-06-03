@@ -1,0 +1,33 @@
+<h1>Projeto de pastas</h1>
+<ul class="tree">
+    <li><span gab>Beckend</span> </li>
+    <ul>
+        <li>
+            <span id="teste" class="titulo">app</span>
+            <ul>
+                <li>produto.js</li>
+                <li>usuario.js</li>
+            </ul>
+        </li>
+    </ul>
+
+</ul>
+<!--
+    Pesquisando:
+    Propriedade Display:
+    inline: não aceita parametros de altura e largura
+    block: ocupa uma linha inteira
+-->
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+    const element = document.getElementById('teste')
+    
+    element.onclick = () => {
+    const ul = element.nextElementSibling
+    const displayVisibilidade = ul.style.display
+    ul.style.display = displayVisibilidade === 'none' ? 'block' : 'none'    
+    }
+
+
+</script>
