@@ -1,10 +1,10 @@
 
-<p>
+<p id="muro">
     <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="mura da cidade"
     width="513" height="342" title="mura da cidadezinha">
 </p>
 
-<p>
+<p gab>
     <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" alt="intro" height="342">
 </p>
 
@@ -33,6 +33,11 @@
 
 
 <style>
+
+    p{
+        position: absolute;
+    }
+
     .circular{
         width: 513px;
         background-color: black;
@@ -51,3 +56,31 @@
         background-size: 200%;
     }
 </style>
+
+<script>
+    /*Lengeda
+    elemento a ser movido
+    inicio de onde vai vir a imagem
+    passo quanto ele vai andar por tempo detemrinado
+    callback vai chamar a recursao
+    */
+    function mover(elemento,inicio,fim,passo,callback){
+        const novoInicio = inicio - passo
+        if(novoInicio >= fim){
+            elemento.style.right = novoInicio + 'px'
+           setTimeout(() => {
+               mover(elemento,inicio,fim,passo,callback)
+               console.log('oi')
+           }, 7); 
+        }else{
+            callback()
+        }
+    }
+
+
+    const figura = document.querySelector('[gab]')
+    mover(figura,1500,-400,5,()=>{
+        console.log('rodando')
+    })
+
+</script>
