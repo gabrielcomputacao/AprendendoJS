@@ -1,0 +1,22 @@
+* seletor universal
+elemento Ex: p,div,h1
+.class pegar varios elementos anotados com aquela classe
+#id pegar um elemento especifico, ou como navegador da pagina
+[atributos] 
+
+
+:pseudo-class    ::pseudo-elementos
+
+Combinar Seletores
+
+irmaos adjacentes(dentro de um mesmo pai, um seguido do outro)
+div + p
+
+div ~ p (mesmo pai, se tem uma tag div antes da tag p ele aplica o css)
+
+div > p acessar um filho direto
+
+div p - qualquer elemento p que esteja dentro da div em questao
+
+div,p - o mesmo conjunto de propriedade ser aplicada em dois ou mais seletores declarados
+

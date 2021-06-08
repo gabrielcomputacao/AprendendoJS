@@ -5,14 +5,51 @@
     
     <title>Class tag</title>
     <link rel="stylesheet" href="cssExercicios/tag.css">
+
+    <style>
+        #aprovados{
+            color: yellow;
+            background-color: tomato;
+        }
+        /*atributo feira
+        pode associar a um valor especifico
+        se colocar =escritorio procura a tag escritorio
+        se colocar ~= procura qualquer coisa com o nome depois do igual separados por espaço
+        se colocar *= procura se a proxima palavra esta contida em alguma tag EX: sa tudo que tiver sa meio começo
+        ou final
+        */
+        [feira]{
+            color: red;
+        }
+        /*pega os primeiros filhos de ol com numeração impar*/
+        ol :nth-child(odd){
+            color: blue;
+        }
+        /*pega o segundo filho do tipo classe span*/
+        body span:nth-of-type(2){
+            color: chartreuse;
+        }
+    </style>
+
 </head>
-<body class="tag">
+<body class='tag'>
     <div class="tag">
         <span class="tag">1</span>
         <span class="tag">2</span>
         <span class="tag">3</span>
         <p class="tag">4</p>
-        <div class="tag">5</div>
+        <div class="tag">
+            5
+            <ul class="tag" feira='escritorio'>
+                <li>Cafe</li>
+                <li>Bolo</li>
+            </ul>
+            <ol id="aprovados" class="tag">
+                <li>Maira</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+        </div>
         <ul class="tag">6</ul>
         <ol class="tag">7</ol>
         <form action="tag">8</form>
