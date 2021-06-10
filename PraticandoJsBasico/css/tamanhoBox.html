@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 45px;
+        }
+        div{
+            background-color: aqua;
+            width: 100%;
+            height: 300px;
+            padding: 100px;
+            border: solid 20px;
+            /*  A div realmente tem 100% mas com a borda e o padding esses elementos somam ao tamanho
+            final, por isso a pagina gera uma barra de scroll, pois a pagina soma todas as medidas que no caso
+            é div + borda + padding
+            existe o metodo para todos esses valores serem considerdos dentro do 100%
+            box-sizing= border-box*/
+            box-sizing: border-box;
+            /* Quando se coloca content-box ele considera 100% somente o conteudo */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        O tamanho do Box é ...
+    </div>
+</body>
+</html>

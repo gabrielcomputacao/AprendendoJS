@@ -1,0 +1,15 @@
+Unidades
+
+Absoluts        ViewPort=tamanho  maximo da pagina
+Px              vh - pega a altura do viewport e dividi por 100
+cm              vw - pega a largura do viewport e dividi por 100
+mm              vmin - é a menor dimensao do viewport
+                vmax - é a maior dimensao do viewport
+
+Font
+rem - pega o tamanho da font do elemento raiz 
+em - baseada na tag pai, se for setada na div pai, entao pega 2vzes o tamamnho do pai
+
+Percentual
+% - caso especial
+Dimensoes da propria tela(viewport), depende do tipo de configuracao

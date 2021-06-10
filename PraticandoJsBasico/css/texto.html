@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        p{
+            font-size: 100%;
+            font-size: 1em;
+
+
+            /* unidades Absolutas */
+            font-size: 12pt;
+            font-size: 40px;
+
+            /* Unidades relativas */
+            font-size: 2.2em;
+            font-size: 2.2rem;
+
+
+            text-transform: lowercase;
+            text-decoration: overline underline;
+            word-spacing: 50px;/* espaço entre as palavras */
+            letter-spacing: 40px;/* espaço entre as letras */
+
+        }
+
+        .botao{
+            font-size: 29px;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+        }
+
+        .destaque{
+            color: azure;
+            background: tomato;
+            box-shadow: 2px 2px 1px 1px black;
+        }
+
+        .destaque:active{
+            box-shadow: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            Que texto <br>
+            legal!!!
+        </p>
+    </div>
+    <a href="http://google.com" class="botao destaque" target="_blank">google</a>
+</body>
+</html>
