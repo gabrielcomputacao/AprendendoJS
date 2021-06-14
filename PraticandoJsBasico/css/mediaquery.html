@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 40px;
+            margin: 20px;
+            padding: 20px;
+            background-color: coral;
+            border: solid 5px;
+        }
+
+        /* com a tela até 600px ele nao vai mostrar esse componente
+        Usado para visoes nos mobiles e diminuição de tela
+        orientação se está no modelo retrato ou paisagem */
+        @media(max-width:600px){
+            .muito-pequeno{ display: none;}
+        }
+        @media(max-width: 500px),(orientation:porttrait){
+            .pequeno-retrato { background-color: darkgreen;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="muito-pequeno">muito pequeno</div>
+    <div class="pequeno-retrato">pequeno retrato</div>
+    <div class="intervalo">Intervalo</div>
+</body>
+</html>

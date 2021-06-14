@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+}
+.cabecalho{
+     box-sizing: border-box; 
+    font-family: Karla;
+    background-color:cadetblue;
+     height: 70px; 
+}
+
+.menu,li {
+    display: inline-block;
+}
+
+
+li{
+    margin-left: 15px; 
+    
+}
+li a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 4px;
+   
+}
+li a:hover{
+    background-color: black;
+}
+
+.logo{
+    display:inline;
+}
+
+.logo a img{
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.autenticacao{
+    display: inline;
+    margin-left: 420px;
+    
+}
+
+.autenticacao a{
+    margin-left: 15px;
+    text-decoration: none;
+    color: whitesmoke;
+    margin-bottom: 10px;
+    
+}
+
+.menuToggle{
+    margin-left: 40px;
+    display: none;
+}
+
+.botao{
+    border-radius: 35%;
+    padding: 7px 7px;
+    margin-bottom: 10px;
+}
+
+.destaque{
+    background-color: red;
+    box-shadow: 3px 3px 2px 1px black;
+}
