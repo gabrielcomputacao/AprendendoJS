@@ -146,6 +146,23 @@ o tamanho padding size e a propriedade border, mas não incluem a propriedade ma
                 <a href="#registrar" class="botao destaque">registrar</a>
             </aside>
         </header>
+        <script>
+            window.onhashchange = function(e){
+                const oldURL = e.oldURL.split('#')[1]
+                const newURL = e.newURL.split('#')[1]
+                console.log(oldURL)
+
+                const oldLink = document.querySelector(`.menu a[href='#${oldURL}']`)
+                const newLink = document.querySelector(`.menu a[href='#${newURL}']`)
+
+                /* se estiverem setadas as variaveis
+                    ele vai remover o selected do link antigo e
+                    colocar o selected no proximo link que for clicado
+                */
+                oldLink && oldLink.classList.remove('selected')
+                newLink && newLink.classList.add('selected')
+            }
+        </script>
     </body>
     
 </body>
