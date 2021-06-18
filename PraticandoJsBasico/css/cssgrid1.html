@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid</title>
+</head>
+<style>
+    html,body{
+        margin: 20px;
+        height: calc(100% - 40px);
+        background-color: white;
+    }
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        border: solid 5px blue;
+        background-color: burlywood;
+    }
+    body{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);/* multiplica o primeiro numero pelos outros 
+        seguintes,no caso teria 12 colunas */
+        grid-template-columns: 200px 20% 1fr;/* 3 colunas, um (1fr)fragmento pega o restante que sobrou */
+        grid-template-rows: 50% 25% 12.5% 12.5%;/* tamanho das linhas */
+        /* propriedade auto(automatico) difine o mesmo tamanho para os componentes restantes */
+
+
+
+    }
+
+    .d8{
+        /* Como se fosse uma tabela
+            escolhendo onde o elemento vai começar, sao marcados por linhas
+            e onde ele vai terminar
+
+            span - vai expandir duas colunas
+         */
+        grid-column-start: 2;
+        grid-column-end: span 2;
+        grid-row-start: 3;
+        grid-row-end: span 2;
+        /* propriedade z - index
+            numero de prioridade para um componente sobresair sobre outro 1,10,100
+            se for maior que o outro o componente soprepoe a outra
+         */
+    }
+
+</style>
+
+<body>
+
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+    <div class="d6">6</div>
+    <div class="d7">7</div>
+    <div class="d8">8</div>
+    <div class="d9">9</div>
+    <div class="d10">10</div>
+    <div class="d11">11</div>
+    <div class="d12">12</div>
+    
+</body>
+</html>

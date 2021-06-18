@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 3</title>
+    <link rel="stylesheet" href="cssExercicios/tag.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            grid-area: cabecalho;
+        }
+        nav{
+            grid-area: navi;
+        }
+        main{
+            grid-area: conteudo;
+        }
+        footer{
+            grid-area: rodape;
+        }
+        body{
+            display: grid;
+            min-height: 100vh;/* ocupa 100 total da tela */
+            grid-template-columns: 300px 1fr;
+            grid-template-rows: 100px 1fr 100px;
+            grid-template-areas: 
+            'cabecalho cabecalho'
+            'navi conteudo'
+            'rodape rodape';
+        }
+
+    </style>
+</head>
+<body>
+    <main class="tag">CONTEUDO</main>
+    <header class="tag"> cabeçalho</header>
+    <footer class="tag">RODAPE</footer>
+    <nav class="tag">navegaçao</nav>
+
+
+    <script src="./JS/tag.js"></script>
+</body>
+</html>

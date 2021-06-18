@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox1</title>
+    <style>
+        div{
+            border: aqua solid 5px;
+            font-size: 40px;
+            margin: 5px;
+        }
+        .big{
+            font-size: 1.5em;
+        }
+        .flex-container{
+            /* o display flex ele é de uma unica direção
+            Quando se coloca em um div pai todos os objetos são modificados para flexis itens */
+            display: flex;
+            flex-direction: row;/* flex padrao é row(linha) que vem quando vc nao coloca nada */
+            flex-wrap: wrap;/* faz os itens flex ficarem dentro do tamanho do pai 
+            row wrap
+            wrap-reverse - faz ficar o wrap ao contrario do sentido que está
+            */
+
+            /* main axis */
+            justify-content: flex-start; /* justifica a partir do start do flex(do começo) */
+            justify-content: space-around;/* envolta do elemento flex vai ter o mesmo espaço com relação
+            ao conteudo pai */
+            justify-content: space-between;/* espaço entre os elementos igual o around só que nao leva em 
+            consideração a margin, espaço apenas entre os elementos */
+
+            /* Cross Axis */
+            align-items: baseline; /* linha de base dos elementos */
+            align-items: center;/*alinha com o cecntro,tem a opção start e end  */
+
+            /* mais de uma linha */
+            align-content: flex-start;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div class="big">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+</body>
+</html>

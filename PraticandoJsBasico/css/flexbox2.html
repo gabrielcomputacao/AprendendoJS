@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex box 2</title>
+    <style>
+        div{
+            border: solid 5px blueviolet;
+            font-size: 40px;
+        }
+        .flex-container div{
+            box-sizing: border-box;
+            width: 100px;
+
+            /* flex grow */
+            /* O flex grow pega os espaço vazios e dependendo do peso que cada elemento recebe
+            ele pega o espaço que sobrou e dividi entre os outros elementos dependendo
+            do peso que cada um recebeu */
+            /* pega o espaço que sobrou , pega os pesos de cada elemento e dividi o espaço que sobro */
+            flex-grow: 1;
+            /* flex-srink
+            Encolhe os elementos colocando pesos igual o flex-row */
+
+            /* flex-basis */
+            /* 
+            determina o tamanho do main axis
+            forma oficial de definir o tamanho do elemento no main axis
+            se estabelececr o tamanho width ou height dependendo de como está o
+            flex-direction algumas vezes voce perde , pois o basis prevalece
+             */
+
+             /* grow shrink basis*/
+             /* com a propriedade flex  
+              */
+        }
+        .flex-container div:nth-child(1){
+            flex-grow: 2;
+        }
+
+
+        .flex-container{
+            display: flex;
+            height: 300px;
+            width: 600px;
+        }
+        .flex-container div:nth-child(3){
+            background-color: chartreuse;
+            order: 1;/* todos elementos tem ordem 0(zero) quando colocado 1 ele é msotrado para a ultima 
+            colocação entre os itens, colocando numero negativo ele e mostrado primeiro */
+            align-self: center;
+            align-self: stretch;/* forma padrao */
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>
