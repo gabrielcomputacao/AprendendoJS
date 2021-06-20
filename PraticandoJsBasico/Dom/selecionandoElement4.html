@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionando 4</title>
+</head>
+<body>
+    <div>
+        <p>inicio</p>
+    </div>
+    <div>
+        <ul>
+            <li>pedro</li>
+            <li>ana</li>
+            <li>bia</li>
+        </ul>
+    </div>
+    <div>
+        <p>fim</p>
+    </div>
+    <script>
+        const lista = document.querySelector('div ul')
+        lista.parentNode/* pega o parent pai da div do query selector */
+        lista.childNodes/* pega os filhos da ul */
+        /* Obs: se tiver identado, o child pega os espaços em branco de linha por linha e coloca como text */
+
+        const primeiro = lista.firstChild /* pega o primeiro filho */
+        primeiro.nextSibling /* pega o proximo filho */
+
+        const ultimo = lista.lastChild/* ultimo elemento */
+        ultimo.previousSibling/* um antes deste que esta sendo selecionado */
+
+        lista.firstElementChild/* pega so os elementos nao pega os espaços em branco */
+
+
+        lista.parentNode.nextSibling
+        /* lista é o ul com as li
+        parentNode é o parent pai desse ul
+        nextsibling é o proximo elemento, no caso camparado ao pai do ul que é a div
+        entao o resultado e a div do fim
+        */
+
+        document.querySelectorAll('div ul li')
+        /* é melhor ir direto no que voce precisa trabalhar sem ficar mt navegando pelos sibling ou next
+         */
+    </script>
+</body>
+</html>

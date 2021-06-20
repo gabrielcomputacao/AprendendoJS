@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionar elemento 01</title>
+    <style>
+        .destaque{
+            border: aqua solid 3px;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro </div>
+    <div>segundo</div>
+    <div class="terceiro ultimo">terceiro ultimo</div>
+   <script>
+       document.getElementById('primeiro').classList.add('destaque')
+
+       const divs = document.getElementsByTagName('div')
+       /* retorna um html collection, nao e interessante trabalhar com html collection, po isso
+       trvalhar com arrays por meio do array.from */
+
+        Array.from(divs).forEach(e => e.classList.remove('destaque'))
+
+        const divsArray = [...divs]/* espalha todos os elementos, transformando em um array */
+
+        const ultimoElement = document.getElementsByClassName('ultimo')
+        /* mesmo sem tranformar o html collection para array da para manipular a partir do for */
+        for(let e of ultimoElement){
+            e.classList.add('destaque')
+        }
+
+
+   </script>
+    
+</body>
+</html>

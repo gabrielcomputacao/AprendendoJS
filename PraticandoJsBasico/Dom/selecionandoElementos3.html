@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selecionando documentos 3</title>
+</head>
+<body>
+    <h1>formulario</h1>
+        <form action="http://www.google.com.br/search" name="pesquisa">
+            <input type="text" name="q" placeholder="digite aqui">
+            <div>
+            <select name="hl" id="hl">
+                <option value="pt-bt"> Portugues-brasil</option>
+                <option value="en-us"> ingles europeu</option>
+            </select>
+            </div>
+            <button>pesquisar</button>
+
+        </form>
+        <script>
+            console.log(document.forms)/* retorna um html collection */
+            console.log(document.forms[0])/* procurar entre o html collection qual forms voce quer*/
+
+            console.log(document.getElementsByName('pesquisa'))/* retorna um nodelist */
+
+            console.log(document.pesquisa)/* pega o formulario com name pesquisa */
+            console.log(document.pesquisa.q)/* dentro do formulario pega o input com name q */
+
+            document.pesquisa.q.value = 'gabriel'
+        </script>
+</body>
+</html>
