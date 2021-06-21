@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .destaque{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body class="conteudo exercicio">
+    <div>
+        classes
+    </div>
+    <script>
+        /* Pega a lista de classes desse elemento */
+        const classes = document.querySelector('div').classList
+        classes.add('destaque')
+        classes.remove('destaque')
+        /* classe toggle verifica
+        se tiver ele tira
+        se nao tiver ele coloca */
+        classes.toggle('destaque')
+
+        console.log(classes.contains('destaque'))
+        console.log(classes.length)
+
+    </script>
+</body>
+</html>

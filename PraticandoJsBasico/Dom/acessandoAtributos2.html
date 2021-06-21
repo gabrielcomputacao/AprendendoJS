@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div>
+        <label for="compras">compras</label>
+        <ul id="compras" destino='escritorio' data-urgencia='5'>
+            <li>cafe</li>
+            <li>agua</li>
+            <li>copo descartavel</li>
+        </ul>
+    </div>
+    <script>
+        /* uma div com atributo ul que tenho o atributo destino com valor igual a escritorio */
+        const lista = document.querySelector('div ul[destino="escritorio"]')
+        console.log('ul...')
+        console.log('childNodes',lista.childNodes)
+        console.log('destino',lista.destino)/*pela anotaçao o browser nao encherga atributos criados tentando
+        buscar pela notação ponto*/
+        console.log('getAtribute',lista.getAttribute('destino'))
+        console.log('hasAtributte',lista.hasAttribute('destino'))/* verifica se esse atributo passado
+        está dentro do ul no caso*/
+        lista.setAttribute('status','aberto')
+
+        console.log(lista.dataset)
+        console.log(lista.getAttribute('data-urgencia'))
+
+        const label = document.querySelector('label')
+        console.log(label.for)/* nao identifica pela anotação ponto */
+        console.log(label.htmlFor)/* agora sim pela anotacao ponto identifica e traz o que esta
+        escrito no for da label */
+        console.log(label.getAttribute('for'))/* pelo getAtributto pode usar normal */
+    </script>
+</body>
+</html>
