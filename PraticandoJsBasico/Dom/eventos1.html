@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <!-- onclick="navegarEm5s(event)" -->
+        <a espera-um-pouco href="https://google.com.br" >google</a>
+    </div>
+</body>
+    <script>
+        function navegarEm5s(e){
+            e.preventDefault()/* previne o comportamento padrao */
+            console.log("saindo em 5 segundos")
+            setTimeout( ()=>{
+                const link = e.target/* pega o html que está fazendo a ação e pega o href desse elemento html */
+                window.location.href = link /* coloca o link que foi pega pelo item html e seu href
+                e coloca na barra de pesquisa: window.location.href siginifica a barra de pesquisa da pagina
+                Entao o link que estava no href da tag (a) vai para a barra de pesquisa da pagina,depois de
+                5000 mili segundos que a 5 segundos */
+            },5000)
+        }
+
+        //outro meio de colocar o evento onclick
+       /*  const a = document.querySelector('a')
+        a.onclick=navegarEm5s */
+
+        //meio usado pelo professor
+        //criar um atributo personalizado
+
+        const a = document.querySelector('[espera-um-pouco]')
+        a.onclick = navegarEm5s
+
+    </script>
+</html>

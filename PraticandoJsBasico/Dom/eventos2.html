@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento 2</title>
+</head>
+<style>
+    div{
+        border: aqua solid 3px;
+        background-color: yellow;
+    }
+</style>
+<body>
+    <div>elemento</div>
+    
+    <script>
+        const item = document.querySelector('div')
+        item.style.position = "absolute"/* colocando o style da div para ser absoluto na pagina
+        qualquer lugar da pagina */
+
+
+        item.onmousemove = event =>{
+            const item = event.target/* quem sofreu o evento no caso a div */
+            item.style.cursor = 'move'
+            /* verifica se  o evento é de estar clicando no item, se for ele retorna verdadeiro*/
+            if(event.buttons){
+                item.style.top = `${event.clientY - (item.clientHeight / 2)}px`
+                /* quero setar a posicao de onde ela (div) esta com relacao ao topo da pagina
+                event.clientY mostra com relaçao ao eixo Y onde o mouse está vertical
+                item.clientHeight altura da div dividido por 2(para sempre ficar selecionado no meio da div,
+                cursor bem no meio do elemento)
+                */
+                item.style.left = `${event.clientX - (item.clientWidth / 2)}px`
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
