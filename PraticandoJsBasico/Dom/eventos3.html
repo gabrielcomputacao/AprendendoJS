@@ -26,6 +26,7 @@
             width: 50%;
             background-color: coral;
             display: inline-block;
+            height: 450px;
         }
         #ap{
             display: inline;
@@ -47,6 +48,34 @@
     </div>
 
     <script>
+        const itens = document.querySelectorAll('[wp-dropzone] .item')
+        itens.forEach((item,index) =>{
+            item.draggable = true /* propriedade que faz um item poder ser arrastado */
+            /* se o id nao estiver setado colocar um id para o item,logo a baixo */
+            item.id = item.id || `draggable-item-${index}`
+            item.ondragstart = (e) =>{
+                e.dataTransfer.setData('item-id',e.target.id)
+            }
+            /* Explicando começando de ondragstart
+                ondragstart - começar a arrastar o item
+                ele vai setar o evento de tranferencia dataTransfer
+                setando(mudando) para o item-id, pegando o id do item que ele esta arrastando
+             */
+        })
+
+        const dropzones = document.querySelectorAll('[wp-dropzone]')
+        dropzones.forEach((dropzone)=>{
+            dropzone.ondragover = e => e.preventDefault()/* tira o comportamento padrao , pois se nao, nao teria
+            como chamar a proxima funcao evento que e quando se solta o componente */
+
+            dropzone.ondrop = function(e){
+                const id = e.dataTransfer.getData('item-id')/* pegando o id setado na hora de clicar para
+                arrastar */
+                const item = document.getElementById(id)
+                e.target.appendChild(item) /* onde eu soltei o mouse e o target e esta adicionando o
+                filho nele, o filho que vem do id do elemento que eu estou arrastando */
+            }
+        })
 
     </script>
 </body>

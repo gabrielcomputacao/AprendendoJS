@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #segunda{
+        margin: auto;
+        width: 50%;
+        /* largura 50 do componente e a margin ele calcula uma igualdade para os dois lados */
+    }
+    .primeirac{
+        position: relative;
+        width: 100%;
+    }
+    .segundac{
+        text-align: center;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        margin-left: -100px;
+    }
+</style>
+<body>
+    <div id="primeira">
+        <div id="segunda">
+            <p>Colocando no centro da pagina com margin auto</p>
+        </div>
+    </div>
+
+    <div class="primeirc">
+        <div class="segundac">
+            <p>COlocando no centro com absolute no pai</p>
+        </div>
+    </div>
+</body>
+</html>
