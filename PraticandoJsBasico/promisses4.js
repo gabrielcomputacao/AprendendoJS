@@ -18,3 +18,4 @@ funcionarouNao("testando", 1).then(
 
 //tem como tratar um erro dentro do then, o primeiro é a resultado, o segundo parametro é o tratamento de erro
 
+//
