@@ -1,38 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms Acoes</title>
+        <style>
+            #hl {
+                display: block;
+            }
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms Acoes</title>
-    <style>
-        #hl{
-            display: block;
-        }
-        form{
-            position: absolute;
-            
-        }
-        #separacao{
-            display: inline-block;
-            position: relative;
-        }
-    </style>
-</head>
+            #separacao {
 
-<body>
-    <form action="" name="pesquisa">
+                margin: 0 auto;
+                width: 200px;
+            }
+        </style>
+    </head>
+
+    <body>
         <div id="separacao">
-        <h2>Formulário</h2>
-        <input type="text" name="q" placeholder="digite aqui...">
-        <select name="hl" id="hl" >
-            <option value="pt-br">br</option>
-            <option value="en-us">ingles</option>
-        </select>
-        <button submit> Pesquisar</button>
-        </div>
-    </form>
-</body>
+            <h2>Formulário</h2>
+            <form action="http://www.google.com.br/search" name="pesquisa">
+                <input type="text" name="q" placeholder="digite aqui...">
+                <select name="hl" id="hl">
+                    <option value="pt-br">br</option>
+                    <option value="en-us">ingles</option>
+                </select>
+                <button submit> Pesquisar</button>
 
+            </form>
+        </div>
+        <script>
+
+            /* Pegando o comportamento do click do botao */
+            const submit = document.querySelector('[submit]')
+            submit.onclick = (event) => {
+                event.preventDefault() /* para o comportamento padrao do botao que e enviar a requisicao */
+
+
+                const form = event.target.parentNode
+                const formData = new FormData(form)
+                /* Para formatar dados do relatorio usa o form data
+                event target pega o componente que sofreu o evento e o parentNode pega o componente pai que
+                está envolvendo o botao(componente que sofreu a acao)
+                */
+
+                formData.append('ajax', true)/* adicionar uma nova informacao no formData */
+                formData.get('q')/* verifica o valor que o campo q está pegando(no caso seria o input) */
+
+                //-------------------------------------------------------------------------------------
+
+
+                /*  Pegando o comportamento do onsubmit envio 
+                
+                const formSubmit = document.forms[0] pega o array de forms no caso so tem 1 
+                form.onsubmit = (event) => { pega o evento de submeter o envio de dados 
+                    event.preventDefault()  para o comportamento padrao do botao que e enviar a requisicao 
+                    const form = event.target
+                    const formData = new FormData(form)
+                     form data pega os dados do formulario 
+                } */
+            }
+        </script>
+    </body>
 </html>
