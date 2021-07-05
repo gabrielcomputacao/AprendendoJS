@@ -1,0 +1,14 @@
+Display:flex
+
+Flex-direction : voce consegue mudar a direcao d main axis, Com as propriedades reverse , reverte a posicao
+do main axis
+
+justify-content : vai alinhar os itens no eixo principal, nao importa se e linha ou coluna,ele alinha todos
+os itens, flex-start alinha pelo começo da linha(começa e final do flex container)
+
+align-items : olha a posicao do cros axis(segundo eixo) e alinha no center end start e tem a opcao do
+stretch que estica os componentes para cobrirem todo o espaço do segundo eixo
+
+align-self : um tipo de elemento especifico , quando voce quer um propriedade em um elemento especifico no caso
+um flex item especifico ele sobrescreve o que estava no flex container
+
