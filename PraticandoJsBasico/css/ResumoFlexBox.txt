@@ -12,3 +12,12 @@ stretch que estica os componentes para cobrirem todo o espaço do segundo eixo
 align-self : um tipo de elemento especifico , quando voce quer um propriedade em um elemento especifico no caso
 um flex item especifico ele sobrescreve o que estava no flex container
 
+flex-grow: espande um elemento para ocupar a flex toda, essa expansao fica a cargo de numeros sequenciais
+1,2,3 e assim ele pega o flex container calcula a porcentagem e expande o flex-item
+
+flex-bases: define um tamanho especifico para um flex item
+
+flex-wrap: nowrap ele nao quebra linha, wrap ele quebra a linha
+
+align-content: alinha com relaçao as linhas existentes dentro do flex box
+
